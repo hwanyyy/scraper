@@ -1,2 +1,3 @@
 # scraper
-go 공부하면서 끄적끄적..
+
+![](https://github.com/hwanyyy/scraper/blob/master/channel.png)
