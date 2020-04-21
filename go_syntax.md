@@ -2,7 +2,6 @@
 
 
 
-## Theory
 
 ### Packages and Imports 
 
