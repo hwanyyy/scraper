@@ -775,7 +775,7 @@ func count(person string, wg *sync.WaitGroup) {
 
 goroutine들 사이에서 데이터를 주고 받는데 사용되는데, 이때 Channel을 이용하게 된다. Channel은 `make()` 함수를 통해 미리 생성되어야하고, blocking 연산자(<-)를 통해서 데이터를 주고받는다. 또 받는 쪽에서 준비될 때까지 **Channel에서 대기**하므로 별도로 wg로 lock을 걸어주지 않고, 동시성 프로그래밍의 문제인 **데이터 동기화**하는데 사용된다. blocking 연산자 또한 `sync`패키지 처럼 갯수를 맞춰야한다.
 
-![image-20200329012126050](/Users/hwany/Library/Application Support/typora-user-images/image-20200329012126050.png)
+![](https://images.velog.io/images/hwany/post/287308ee-d9b2-44aa-813b-bf47b898bae6/image.png)
 
 main함수 안에서 time.Sleep을 없애도 되는 이유는 채널로부터 뭔가를 받을 때 main에서 어떤 답이 올 때까지 기다리기 때문이다. 타입은  `chan` 뒤에 지정해 줘야한다. 
 
